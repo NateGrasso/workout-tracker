@@ -13,16 +13,16 @@
 using namespace :: std;
 
 
-int setTotal = 0, exerciseTotal = 0, totalWeight= 0, reps=0, weight=0, exerciseCount = 1,  set = 1, start = 0; //#4
-string date, exerciseName, line; //#4
-char nextSet, nextExercise; //#4
-const char SENTINEL = 'q'; //#4 #9
+int setTotal = 0, exerciseTotal = 0, totalWeight= 0, reps=0, weight=0, exerciseCount = 1,  set = 1, start = 0; 
+string date, exerciseName, line; 
+char nextSet, nextExercise; 
+const char SENTINEL = 'q'; 
 
-vector <int> setTotalArray; //#5
-vector <int> exerciseTotalArray; //#5
+vector <int> setTotalArray; 
+vector <int> exerciseTotalArray; 
 
-ofstream out_workouts; //#4
-ifstream in_workouts; //#4
+ofstream out_workouts; 
+ifstream in_workouts; 
 
 int main()
 {   // main menu, prompt for options, specify start values
@@ -33,10 +33,10 @@ int main()
     cin >> start;
     cout << '\n';
     
-    switch(start) // main structure of program #9 #8
+    switch(start) // main structure of program 
     {
-        case 1: //collects user input, opens and appends calculated input to a file, outputs weight totals #3,#5,#8,#9
-            out_workouts.open ("workouts.txt", fstream :: app);                                       // open file and append so the file is not overwritten #6
+        case 1: //collects user input, opens and appends calculated input to a file, outputs weight totals 
+            out_workouts.open ("workouts.txt", fstream :: app);                                      // open file and append so the file is not overwritten
             cout << '\n' << "Please enter the date: ";
             cin >> date;
             cout << "\n";
@@ -93,7 +93,7 @@ int main()
             }
             break;
         
-        case 2: //Opens and read txt file and outputs read data to screen #9,#6,#3
+        case 2: //Opens and read txt file and outputs read data to screen 
             in_workouts.open("workouts.txt");
                 
             if (in_workouts.is_open())
@@ -109,7 +109,7 @@ int main()
                 cout << "file not found.";
             }
                 break;
-        default: // Gives an error code if non-valid input is entered #9
+        default: // Gives an error code if non-valid input is entered 
             cout << "Not a valid option." << '\n';
                 break;
     }
